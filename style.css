@@ -1,0 +1,28 @@
+
+
+body {
+    font-family: Chalkduster;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rock, .paper, .scissors {
+    font-family: Chalkduster;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    box-shadow: 3px 2px 2px ;
+}
+
+.rock:active {
+    background-color:burlywood
+}
+
+.paper:active{
+    background-color:burlywood
+}
+.scissors:active{
+    background-color:burlywood
+}
