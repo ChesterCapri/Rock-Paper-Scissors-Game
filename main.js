@@ -28,20 +28,30 @@
         compAnswer = rps[random]
 
         setTimeout(() => {
-            compChoice.textContent = `The Computer chose ${compAnswer}`;
-            checkForTie()
+            compChoice.textContent = `The Computer chose ${compAnswer.charAt(0).toUpperCase() + compAnswer.slice(1)}`;
+            checkResults()
         }, 1000 );
       }
   
       
 
-    function checkForTie() {
+    function checkResults() {
         if (compAnswer === humanAnswer) {
             result.textContent = "It's a TIE.";
             console.log("It's a TIE.");
-        }else {
-            result.textContent = "";
         }
+        else if (
+            (humanAnswer === "rock" && compAnswer === "scissors") ||
+            (humanAnswer === "scissors" && compAnswer === "paper") ||
+            (humanAnswer === "paper" && compAnswer === "rock")
+        ) {
+            result.textContent = "You Win!!!";
+            console.log("You WIN!");
+        }else {
+            result.textContent = "You Loose!!!";
+            console.log("You LOSE!");
+                
+            }
     }
     
 
@@ -74,27 +84,4 @@
 
 
 
-/*  //...and then the outcomes.
-else if (
-    (humanChoice === "rock" && compChoice === "scissors") ||
-    (humanChoice === "scissors" && compChoice === "paper") ||
-    (humanChoice === "paper" && compChoice === "rock")
-) {
-    console.log("You WIN!");
-    humanScore++;
-    }
-    else {
-        console.log("You LOSE!");
-        computerScore++
-    }
 
-    rounds++;
-    
-    console.log(`Score: You - ${humanScore}, Computer - ${computerScore}`);
-    console.log(`Rounds played: ${rounds}`);
-
-
-console.log("Thanks for playing! Final scores:");
-console.log(`You: ${humanScore}`);
-
-    */
